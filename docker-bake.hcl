@@ -20,7 +20,8 @@ target "backend-server" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/backend-server:latest", "${IMAGE_REGISTRY}/apitable/backend-server:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/backend-server:latest", "${IMAGE_REGISTRY}/zainchen/backend-server:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "room-server" {
@@ -29,7 +30,8 @@ target "room-server" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/room-server:latest", "${IMAGE_REGISTRY}/apitable/room-server:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/room-server:latest", "${IMAGE_REGISTRY}/zainchen/room-server:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "web-server" {
@@ -38,7 +40,8 @@ target "web-server" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/web-server:latest", "${IMAGE_REGISTRY}/apitable/web-server:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/web-server:latest", "${IMAGE_REGISTRY}/zainchen/web-server:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "init-db" {
@@ -47,7 +50,8 @@ target "init-db" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/init-db:latest", "${IMAGE_REGISTRY}/apitable/init-db:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/init-db:latest", "${IMAGE_REGISTRY}/zainchen/init-db:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "openresty" {
@@ -56,7 +60,8 @@ target "openresty" {
   args = {
     SEMVER_FULL = SEMVER_FULL
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/openresty:latest", "${IMAGE_REGISTRY}/apitable/openresty:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/openresty:latest", "${IMAGE_REGISTRY}/zainchen/openresty:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
 
 target "all-in-one" {
@@ -66,5 +71,6 @@ target "all-in-one" {
     SEMVER_FULL = SEMVER_FULL
     IMAGE_TAG = IMAGE_TAG
   }
-  tags = ["${IMAGE_REGISTRY}/apitable/all-in-one:latest", "${IMAGE_REGISTRY}/apitable/all-in-one:${IMAGE_TAG}"]
+  tags = ["${IMAGE_REGISTRY}/zainchen/all-in-one:latest", "${IMAGE_REGISTRY}/zainchen/all-in-one:${IMAGE_TAG}"]
+  platforms = ["linux/amd64", "linux/arm64"]
 }
